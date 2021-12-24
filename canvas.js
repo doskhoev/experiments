@@ -1,6 +1,6 @@
 const MAX_RADIUS = 5;
 const MIN_RADIUS = 2;
-const MAX_COUNT_OF_FLAKES = 500;
+const MAX_COUNT_OF_FLAKES = 2000;
 
 window.onload = function () {
   const canvas = document.getElementById("my_canvas");
@@ -15,7 +15,7 @@ window.onload = function () {
 
   for (let i = 0; i < MAX_COUNT_OF_FLAKES; i++) {
     flakes.push({
-      x: W * (1.3 * Math.random() - 0.3),
+      x: 1.5 * W * Math.random(),
       y: H * Math.random(),
       r: MIN_RADIUS + (MAX_RADIUS - MIN_RADIUS) * Math.random(),
       d: 1 + Math.random(),
@@ -42,17 +42,17 @@ window.onload = function () {
       const f = flakes[i];
       f.y += Math.pow(f.d, 2);
       // f.x += ((1 + Math.sin(angle)) * f.d) / MAX_RADIUS;
-      f.x += f.d / 2 + Math.sin(angle);
+      f.x -= f.d / 2 + Math.sin(angle);
 
       if (f.y > H + MAX_RADIUS) {
         flakes[i] = {
           ...f,
-          x: W * (1.3 * Math.random() - 0.3),
+          x: 1.5 * W * Math.random(),
           y: 0,
         };
       }
     }
   }
 
-  setInterval(drawFlakes, 40);
+  setInterval(drawFlakes, 20);
 };
