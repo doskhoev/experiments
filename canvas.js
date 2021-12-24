@@ -15,7 +15,7 @@ window.onload = function () {
 
   for (let i = 0; i < MAX_COUNT_OF_FLAKES; i++) {
     flakes.push({
-      x: 1.5 * W * Math.random(),
+      x: (H + W) * Math.random(),
       y: H * Math.random(),
       r: MIN_RADIUS + (MAX_RADIUS - MIN_RADIUS) * Math.random(),
       d: 1 + Math.random(),
@@ -47,7 +47,7 @@ window.onload = function () {
       if (f.y > H + MAX_RADIUS) {
         flakes[i] = {
           ...f,
-          x: 1.5 * W * Math.random(),
+          x: (H + W) * Math.random(),
           y: 0,
         };
       }
