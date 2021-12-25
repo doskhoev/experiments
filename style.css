@@ -4,7 +4,7 @@ html {
 
 body {
   margin: 0;
-  background: #aad4f9;
+  background: #85b1d8;
   height: 100%;
 }
 
@@ -20,8 +20,9 @@ body {
 }
 
 .title {
-  color: #3445764f;
+  color: #20306bb4;
   font-family: "Oswald", sans-serif;
-  font-size: 80px;
+  font-size: 60px;
   text-align: center;
+  margin: 20px;
 }
