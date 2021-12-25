@@ -4,14 +4,15 @@ const MIN_RADIUS = 3;
 const MIN_WEIGHT = MIN_RADIUS ** 3;
 const MAX_WEIGHT = MAX_RADIUS ** 3;
 
-const MAX_COUNT_OF_FLAKES = 1000;
+const W = window.innerWidth;
+const H = window.innerHeight;
+
+const MAX_COUNT_OF_FLAKES = W * H / 2000;
 
 window.onload = function () {
   const canvas = document.getElementById("my_canvas");
   const ctx = canvas.getContext("2d");
 
-  const W = window.innerWidth;
-  const H = window.innerHeight;
   canvas.width = W;
   canvas.height = H;
 
